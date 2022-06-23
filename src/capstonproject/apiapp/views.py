@@ -69,7 +69,8 @@ class GoogleLoginView(View):
         channel_response = requests.get(url)
         channel_information = json.loads(channel_response.text)
         channel_id = channel_information['items'][0]['contentDetails']['relatedPlaylists']['uploads']
-        api_key = 'AIzaSyBaJzw4NEYGhg1epKBLd5da9Rs7bkyqGtM'
+       
+
 
         url = f'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId={channel_id}&key={api_key}'
         video_response = requests.get(url)
@@ -107,7 +108,6 @@ def Comment_Post(request, video_id):
     model1_path = os.path.join(BASE_DIR, 'model1.pt')
     model1 = Model1(model1_path)
     video = Video.objects.filter(video_id=video_id)
-    api_key = 'AIzaSyBaJzw4NEYGhg1epKBLd5da9Rs7bkyqGtM'
     max_result = 100
     url = f'https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&maxResults={max_result}' \
           f'&textFormat=plainText&videoId={video_id}&key={api_key}'
@@ -148,7 +148,6 @@ def CommentUpdate(request):
     token_count = AccessToken.objects.count()
     token = AccessToken.objects.get(pk=token_count)
     comment_fix = Preprocessing(badword_a_path, badword_b_path)
-    api_key = 'AIzaSyBaJzw4NEYGhg1epKBLd5da9Rs7bkyqGtM'
 
     url = f'https://youtube.googleapis.com/youtube/v3/comments?part=snippet&key={api_key}'
 
@@ -185,7 +184,6 @@ def CommentUpdate(request):
 
 def CommentDelete(request):
     queryset = Comment.objects.all()
-    api_key = 'AIzaSyBaJzw4NEYGhg1epKBLd5da9Rs7bkyqGtM'
     token_count = AccessToken.objects.count()
     token = AccessToken.objects.get(pk=token_count)
 
