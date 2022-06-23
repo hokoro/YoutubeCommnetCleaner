@@ -56,7 +56,6 @@ LOGIN_REDIRECT_URL = '/'
 GOOGLE_CLIENT_ID = "919293006995-pc8bb63h8of0ovm6g215gta6v2c6vpe7.apps.googleusercontent.com"
 GOOGLE_REDIRECT_URL = "http://127.0.0.1:8000/api/code"
 GOOGLE_REDIRECT_URL_ENCODING = "http%3A%2F%2F127.0.0.1%3A8000%2Fapi%2Fcode"
-GOOGLE_SECRET_KEY = "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"
 # Application definition
 
 INSTALLED_APPS = [
