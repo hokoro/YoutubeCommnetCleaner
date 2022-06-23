@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+
+    <div style="text-align: center">
+         <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Index</th>
+              <th scope="col">Comment</th>
+              <th scope="col">Author</th>
+              <th scope="col">Comment_Date</th>
+              <th scope="col">Label</th>
+            </tr>
+          </thead>
+          <tbody>
+
+           {% for comment in comment_list %}
+               <tr>
+                    <th scope="row">{{ forloop.counter }}</th>
+                    <td>{{ comment.comment }}</td>
+                    <td>{{ comment.author }}</td>
+                    <td>{{ comment.comment_date }}</td>
+                    <td>{{ comment.label }}</td>
+                </tr>
+           {% endfor %}
+
+          </tbody>
+       </table>
+        <div>
+            {% include 'snippets/pagenation.html' %}
+        </div>
+        <div class="but">
+            <a href="{% url 'apiapp:update'%}" class="btn btn-warning">
+                편집
+            </a>
+            <a href="{% url 'apiapp:delete' %}" class="btn btn-danger">
+                삭제
+            </a>
+        </div>
+        <div>
+            <a href="{% url 'capstonapp:mainpage' %}" class = "btn btn-primary">
+                메인페이지 돌아가기 버튼
+            </a>
+        </div>
+    </div>
+
+{% endblock %}

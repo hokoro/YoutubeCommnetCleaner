@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+    <div style="text-align: center" class="capston_main_page">
+        <div class="Capston_introduce_title">
+            <h1>Welcome to our comment analyzer</h1>
+        </div>
+        <div class="Capstone_Analyzer_Description">
+            <p>Hello, this is our Youtube comment analyzer.</p>
+            <p>And write the url in the text box on the right</p>
+            <p>When you have performed all the actions, click search button</p>
+        </div>
+        <div>
+            <a href="{% url 'apiapp:oauth' %}" class="btn btn-danger rounded-pill px-5">
+                <h5>
+                    삭제
+                </h5>
+            </a>
+            <a href="{% url 'analysisapp:create' %}" class="btn btn-info rounded-pill px-5">
+                <h5>
+                    분석
+                </h5>
+            </a>
+        </div>
+    </div>
+
+{% endblock %}

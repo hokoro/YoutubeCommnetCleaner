@@ -1,0 +1,43 @@
+.capston_header_logo{
+    font-family: 'BIZ UDGothic', sans-serif;
+    padding-top:3rem;
+    padding-bottom: 3rem;
+}
+.capston_main_page {
+    padding-bottom: 5rem;
+}
+.capston_main_page{
+    padding-top:2rem;
+}
+.button-next{
+    padding-top: 3rem;
+}
+.but{
+    padding-bottom: 1rem;
+}
+a{
+    text-decoration: none; /*text 밑줄 없애기*/
+    color: #1e1e1e;
+}
+a:hover{ /*마우스를 올렸을떄*/
+    color: orange;
+}
+
+.mw-30{
+    max-width: 30px;
+    padding-left: 47rem;
+}
+.mw-900{
+    max-width: 900px;
+    padding: 1rem 1.5rem;
+}
+.mw-200{
+    max-width: 200px;
+    padding: 1rem 1.5rem;
+}
+
+.mw-500{
+    max-width: 500px;
+    padding: 1rem 1.5rem;
+}
+

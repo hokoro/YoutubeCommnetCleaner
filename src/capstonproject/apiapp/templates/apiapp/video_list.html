@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+    <div style="text-align: center;">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Index</th>
+              <th scope="col">Video_ID</th>
+              <th scope="col">Title</th>
+              <th scope="col">Date</th>
+              <th scope="col">Button</th>
+            </tr>
+          </thead>
+          <tbody>
+                {% for video in video_list %}
+                <tr>
+                      <th scope="row">{{ forloop.counter }}</th>
+                      <td>{{ video.video_id }}</td>
+                      <td>{{ video.title }}</td>
+                      <td>{{ video.date }}</td>
+                      <td>
+                          <a href="{% url 'apiapp:video' video.video_id%}" class="btn btn-primary">
+                              댓글보기
+                          </a>
+                      </td>
+                </tr>
+          {% endfor %}
+          </tbody>
+       </table>
+        {% include 'snippets/pagenation.html' %}
+        <div>
+            <a href="{% url 'capstonapp:mainpage' %}" class = "btn btn-primary">
+                메인페이지 돌아가기 버튼
+            </a>
+        </div>
+    </div>
+{% endblock %}

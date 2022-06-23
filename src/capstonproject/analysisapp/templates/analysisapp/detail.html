@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+{% block content %}
+
+    <div style="text-align: center">
+        <div style="text-align: center">
+                <img src="{{ target_visual.pie.url}}" alt="pie image" width="700px" height="700px">
+            <img src="{{ target_visual.plot.url }}" alt="plot image" width="700px" height="700px">
+        </div>
+        <hr>
+        <div>
+            <img src="{{target_visual.wordcloud.url}}" alt="wordcloud image">
+        </div>
+        <div>
+            {% if target_visual.emotion == '분노' or target_visual.emotion == '상처' or target_visual.emotion == '무의미'%}
+                <h5>
+                    {{ target_visual.emotion }} 가 가장 많은 감정 입니다
+                </h5>
+            {% else %}
+                 <h5>
+                    {{ target_visual.emotion }} 이 가장 많은 감정 입니다
+                 </h5>
+            {% endif %}
+        </div>
+            <div>
+                <a href="{% url 'analysisapp:list' %}" class = "btn btn-primary">
+                    댓글 세부정보 보기
+                </a>
+            </div>
+        </div>
+{% endblock %}
