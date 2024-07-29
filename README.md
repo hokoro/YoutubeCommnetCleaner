@@ -56,12 +56,11 @@ Member : [천영성](https://github.com/hokoro)
 <img src="http://sw-git.chosun.ac.kr/ycc/ycc/-/raw/main/Data/Image/piechart13.jpg" width="30%" height="30%">
 
 [WordCloud](https://amueller.github.io/word_cloud/)
+<img src="http://sw-git.chosun.ac.kr/ycc/ycc/-/raw/main/Data/Image/wordcloud13.jpg" width="30%" height="30%">
 
-<img src="http://sw-git.chosun.ac.kr/ycc/ycc/-/raw/main/Data/Image/plotchart13.jpg" width="30%" height="30%">
 
 [Time Series Plot Chart](https://matplotlib.org/stable/gallery/index.html)
-
-<img src="http://sw-git.chosun.ac.kr/ycc/ycc/-/raw/main/Data/Image/wordcloud13.jpg" width="30%" height="30%">
+<img src="http://sw-git.chosun.ac.kr/ycc/ycc/-/raw/main/Data/Image/plotchart13.jpg" width="30%" height="30%">
 
 Max_Emotion 추출
 
